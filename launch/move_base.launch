@@ -8,7 +8,7 @@
 
     <!-- remap topics -->
     <remap from="cmd_vel" to="/robot0/cmd_vel"/>
-    <remap from="odom"    to="/odometry/filtered"/>
+    <remap from="odom"    to="/robot0/odom"/>
   </node>
 
 </launch> 

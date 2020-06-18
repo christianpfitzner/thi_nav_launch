@@ -15,12 +15,12 @@ map_layer:
     use_maximum:          true
     first_map_only:       true
 
-road_layer:
-    enabled:              true
-    map_topic:            map2
-    trinary_costmap:      false
-    use_maximum:          true
-    first_map_only:       true
+#road_layer:
+#    enabled:              true
+ #   map_topic:            map2
+ #   trinary_costmap:      false
+ #   use_maximum:          true
+ #   first_map_only:       true
 
 
 global_costmap:
@@ -38,6 +38,6 @@ global_costmap:
     plugins:
         - {name: road_layer,              type: "costmap_2d::StaticLayer"}
         - {name: map_layer,               type: "costmap_2d::StaticLayer"}
-        - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
-        - {name: grid_layer,              type: "simple_layer_namespace::GridLayer"}
+#        - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
+#        - {name: grid_layer,              type: "simple_layer_namespace::GridLayer"}
 
