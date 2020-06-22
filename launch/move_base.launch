@@ -11,4 +11,7 @@
     <remap from="odom"    to="/robot0/odom"/>
   </node>
 
+
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find thi_nav_launch)/config/navigation.config.rviz" />
+  
 </launch> 
