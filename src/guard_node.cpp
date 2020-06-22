@@ -27,6 +27,8 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "guard_node");
   ros::NodeHandle nh;
 
+
+  // the goals for this task are generated for you
   geometry_msgs::Point p1;  p1.x = 3.6;  p1.y = 3.0;
   geometry_msgs::Point p2;  p2.x = 10.0; p2.y = 3.0; 
   geometry_msgs::Point p3;  p3.x = 16.0; p3.y = 3.0; 
@@ -39,7 +41,7 @@ int main(int argc, char **argv)
   g_goals.push_back(p4); 
   g_goals.push_back(p5); 
   g_goals.push_back(p6); 
-
+  // if you don't know how to work with the c++ std::vector read here first: https://de.cppreference.com/w/cpp/container/vector
 
 
   //tell the action client that we want to spin a thread by default
@@ -51,22 +53,20 @@ int main(int argc, char **argv)
   }
 
   move_base_msgs::MoveBaseGoal goal;
-  goal.target_pose.header.frame_id    = "map";
-  goal.target_pose.header.stamp       = ros::Time::now();
 
-  for(const auto g : g_goals)
+
+
+  // you probably need a loop 
   {
-    goal.target_pose.pose.position.x    = g.x;
-    goal.target_pose.pose.position.y    = g.y;
-    goal.target_pose.pose.orientation.w = 1.0;
-    
-    
-    
-    ROS_INFO("Sending goal");
 
 
-    ac.sendGoal(goal);
-    ac.waitForResult();
+
+
+
+
+
+
+
 
     if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
       ROS_INFO("Reached goal. ");
