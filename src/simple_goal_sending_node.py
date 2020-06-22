@@ -10,7 +10,7 @@ def movebase_client():
     client = actionlib.SimpleActionClient('move_base',MoveBaseAction)
     client.wait_for_server()
 
-    goal = MoveBaseGoal()
+    goal = MoveBaseGoal()   
     goal.target_pose.header.frame_id    = "map"
     goal.target_pose.header.stamp       = rospy.Time.now()
     goal.target_pose.pose.position.x    = 1.7
@@ -32,4 +32,4 @@ if __name__ == '__main__':
         if result:
             rospy.loginfo("Goal execution done!")
     except rospy.ROSInterruptException:
-        rospy.loginfo("Navigation test finished.")
+        rospy.loginfo("Navigation test finished.")                                                                                                                                                                      
