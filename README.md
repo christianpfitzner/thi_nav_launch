@@ -7,7 +7,9 @@ This repository illustrates the package move base. It contains several launch fi
 
 # Task 1: 
 Start the launch file simulation.launch, 
-'''roslaunch thi_nav_launch simulation.launch'''
+'''
+roslaunch thi_nav_launch simulation.launch
+'''
 as well as the launch file move_base.launch
 '''roslaunch thi_nav_launch move_base.launch'''
 
