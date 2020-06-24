@@ -4,7 +4,7 @@
 This repository illustrates the package move base. It contains several launch files to start a simulation, as well rviz for visualization. 
 Initially, get the content of this repository and check it out in your catkin workspace, e.g. ```cd ~/catkin_ws/src``` . The command for the checkout is 
 ```
-https://github.com/christianpfitzner/thi_nav_launch.git
+git clone https://github.com/christianpfitzner/thi_nav_launch.git
 ```
 
 # Task 1: 
