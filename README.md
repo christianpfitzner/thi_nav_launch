@@ -45,7 +45,7 @@ The prepared rosnode should be compiled already. Start it with
 ```
 rosrun thi_nav_launch guard_node
 ```
-
+Use the following link to get an idea how movebase receives goals via c++: http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals. 
 
 # Task 5: 
 Be creative: For example, combine the planing from move base with the reactive controll of the robot. Therefore, guard the robot to all provided poses in the map, but then do a rotation on the spot with 360 degrees. You can acchieve this by publishing a direct command to the ```/robot0/cmd_vel``` topic. 
