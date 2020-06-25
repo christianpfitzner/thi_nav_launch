@@ -11,13 +11,20 @@ git clone https://github.com/christianpfitzner/thi_nav_launch.git
 With this first task, we will bring up the move base framework we a predefined configuration. This includes a visualization in rviz, where topics are already subscribing to essential nodes. Furthermore, this example relys on the STDR simulator, which is started by another launch file. 
 
 
-Start the launch file simulation.launch, 
+I'd suggest, that you start a roscore
 ```
-roslaunch thi_nav_launch simulation.launch
+roscore
 ```
-as well as the launch file move_base.launch
+
+
+
+Start the launch file for move base, 
 ```
 roslaunch thi_nav_launch move_base.launch
+```
+as well as the launch file simulation.launch
+```
+roslaunch thi_nav_launch simulation.launch
 ```
 
 # Task 2: 
